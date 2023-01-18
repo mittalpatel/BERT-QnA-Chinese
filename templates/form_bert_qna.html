@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.js">
+    <title>Natural Language Processing (NLP) Question and Answer Demo by Pragnakalp Solutions</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/css/style_bert.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" action="{{ url_for('submitted_form') }}">
+                        <h2 class="form-title">Question And Answer Demo Using BERT NLP</h2>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="comment">Paragraph <span class="red-star">*</span></label>
+                                <textarea name="Paragraph" class="form-control" rows="7" id="comment"
+                                    required>阿里巴巴集團（NYSE：BABA、港交所：9988）创立于1999年，是一家提供電子商務線上交易平台的公司，服務範圍包括B2B貿易、網上零售、購物搜索引擎、第三方支付和雲計算服務。集團的子公司包括阿里巴巴B2B、淘寶網、天猫、一淘网、阿里雲計算、支付寶、螞蟻金服等。
+
+旗下的淘宝网和天猫在2012年销售额达到1.1万亿人民币，2015年度商品交易总额已经超过3万亿元人民币，是全球最大零售商。
+                                    
+根據阿里巴巴集团向美国证券交易委员会提交的IPO招股书显示，雅虎持有阿里巴巴集團22.6%股權、軟銀持阿里集團34.4%股份，另管理層、僱員及其他投資者持股比例合共約為43%，當中馬雲持阿里巴巴集團約8.9%，蔡崇信持股為3.6%。
+                                    
+至2012年九月底止的財政年度，以美國會計準則計算，阿里營業額按年增長74%至318.39億元（港元‧下同），盈利急升80%至37.75億元。
+                                    
+2015年全年阿里巴巴营收146.01億美元，净利為74.94億美元。</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 1 <span class="red-star">*</span></label>
+                            <input name="Question1" class="form-control input-lg" id="inputlg" type="text"
+                                value="阿里巴巴何时成立？" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 2</label>
+                            <input name="Question2" class="form-control input-lg" id="inputlg" type="text"
+                                value="阿里巴巴2015年的收入是多少？">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 3</label>
+                            <input name="Question3" class="form-control input-lg" id="inputlg" type="text"
+                                value="阿里巴巴2015年的利润是多少？">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 4</label>
+                            <input name="Question4" class="form-control input-lg" id="inputlg" type="text"
+                                value="阿里巴巴集团提供什么？">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputlg">Question 5</label>
+                            <input name="Question5" class="form-control input-lg" id="inputlg" type="text"
+                                value="软银在阿里巴巴集团中持有多少？">
+                        </div>
+
+                        <div class="form-group" id="submitblock">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Submit" />
+                            <small class="help-block">
+                                It might take around 30 seconds to process your request. So kindly be patient.
+                            </small>
+                        </div>
+                    </form>
+                    <footer align="center">
+                        <p style="color: black; font-size: 15px;">Developed by : <a href="https://www.pragnakalp.com"
+                                target="_blank">Pragnakalp Techlabs </a></p>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
